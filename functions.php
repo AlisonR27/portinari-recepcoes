@@ -24,7 +24,7 @@ function theme_assets() {
 
 if (!is_admin()):
 
-  include $_SERVER["DOCUMENT_ROOT"].'/portinari/wp-content/themes/portinari/template-parts/functions/api.php';
+  include $_SERVER["DOCUMENT_ROOT"].'/wp-content/themes/portinari/template-parts/functions/api.php';
   
   function my_js_variables(){ ?>
     <script type="text/javascript">
