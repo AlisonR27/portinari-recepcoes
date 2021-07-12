@@ -19,5 +19,5 @@ if ($the_query->have_posts()) {
   </div>
   <?php
 } else {
-  require_once(["DOCUMENT_ROOT"].'/wp-content/themes/portinari/template-parts/content/no-content.php');
+  include $_SERVER["DOCUMENT_ROOT"].'/portinari/wp-content/themes/portinari/template-parts/content/no-content.php';
 }
