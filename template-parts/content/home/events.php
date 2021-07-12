@@ -1,5 +1,5 @@
 <?php 
-$the_query = new WP_Query( array('post_type' => 'cat_evento', 'posts_per_page' => 4) );
+$the_query = new WP_Query( array('post_type' => 'servicos', 'posts_per_page' => 4) );
 if ($the_query->have_posts()) {
   while ($the_query->have_posts()) {
     $the_query->the_post();

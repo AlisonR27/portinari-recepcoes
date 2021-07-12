@@ -1,4 +1,5 @@
 <?php
+/* Template Name: Blog */
   get_header();
   $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
   $sticky = get_option( 'sticky_posts' );
@@ -27,7 +28,7 @@
       }
       wp_reset_postdata();
     } else {
-      include $_SERVER["DOCUMENT_ROOT"].'/portinari/wp-content/themes/portinari/template-parts/content/no-content.php';
+      include $_SERVER["DOCUMENT_ROOT"].'/wp-content/themes/portinari/template-parts/content/no-content.php';
     }
   ?>
 <div class="pagination">

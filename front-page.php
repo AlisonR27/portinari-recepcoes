@@ -19,7 +19,7 @@ get_header();
     </section>
     <section name="eventos" class="container">
       <div class="event-grid">
-        <?php require_once $_SERVER["DOCUMENT_ROOT"].'/portinari/wp-content/themes/portinari/template-parts/content/home/events.php'?>
+        <?php require_once($_SERVER["DOCUMENT_ROOT"].'/wp-content/themes/portinari/template-parts/content/home/events.php');?>
       </div>
       <a id="event-button" href="<?php echo get_site_url()?>/contato">
         <img src="<?php get_asset('img','./agenda.png') ?>" alt="">
@@ -27,7 +27,7 @@ get_header();
       </a>
     </section>
     <section class="blog-bg">
-        <?php require_once $_SERVER["DOCUMENT_ROOT"].'/portinari/wp-content/themes/portinari/template-parts/content/home/blog.php'?>
+        <?php require_once($_SERVER["DOCUMENT_ROOT"].'/wp-content/themes/portinari/template-parts/content/home/blog.php');?>
       </div>
       <a href="<?php echo get_site_url()?>/blog" class="outline-white button block-centering">
         Visitar o blog

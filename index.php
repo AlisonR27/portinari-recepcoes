@@ -1,13 +1,5 @@
 <?php 
 
-
-if (is_archive()) {
-  echo 'Archive';
-}
-elseif( is_singular()){
-  echo 'Singlepage';
-}
-else {
   get_header();
   if ( have_posts() ) {
 
@@ -23,5 +15,5 @@ else {
   
   }
   get_footer();  
-}
+
 

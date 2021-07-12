@@ -62,8 +62,8 @@ else:
       $wp_admin_bar->remove_menu('comments');
   }
   add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );
-  include $_SERVER["DOCUMENT_ROOT"].'/portinari/wp-content/themes/portinari/template-parts/functions/metaboxes.php';
-  include $_SERVER["DOCUMENT_ROOT"].'/portinari/wp-content/themes/portinari/template-parts/functions/custom-posts.php';
+  include $_SERVER["DOCUMENT_ROOT"].'/wp-content/themes/portinari/template-parts/functions/metaboxes.php';
+  include $_SERVER["DOCUMENT_ROOT"].'/wp-content/themes/portinari/template-parts/functions/custom-posts.php';
 
 endif;
 ?>
