@@ -13,4 +13,6 @@ if ($the_query->have_posts()) {
     <?php
   }
   wp_reset_postdata();
+} else {
+  include $_SERVER["DOCUMENT_ROOT"].'/portinari/wp-content/themes/portinari/template-parts/content/no-content.php';
 }

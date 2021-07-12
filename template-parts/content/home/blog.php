@@ -1,6 +1,9 @@
 <?php 
 $the_query = new WP_Query( array('post_type' => 'post', 'posts_per_page' => 3) );
 if ($the_query->have_posts()) {
+  ?>
+  <div class="blog-grid container">
+<?php
   while ($the_query->have_posts()) {
     $the_query->the_post();
     ?>
@@ -12,4 +15,9 @@ if ($the_query->have_posts()) {
     <?php
   }
   wp_reset_postdata();
+  ?>
+  </div>
+  <?php
+} else {
+  include $_SERVER["DOCUMENT_ROOT"].'/portinari/wp-content/themes/portinari/template-parts/content/no-content.php';
 }

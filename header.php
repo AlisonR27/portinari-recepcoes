@@ -15,7 +15,7 @@
       hamburguer.classList.toggle('open');
       naviNav.classList.toggle('show');
     })
-  });
+  });  
   </script>
 </head>
 <body>

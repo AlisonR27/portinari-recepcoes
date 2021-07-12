@@ -3,7 +3,7 @@
 the_post();
 get_header();
 ?>
-    <section name="apresentacao" id="cover" style="background: url('<?php get_asset('img', 'cover-bg.png')?>');">
+    <section name="apresentacao" id="cover" style="background: url('<?php get_asset('img', 'cover-bg.png')?>');background-size:cover;background-repeat:no-repeat;">
       <div class="presentation-carousel">
         <img src="<?php get_asset('img','Simple-logo-white.png') ?>" alt="" width="200px">
         <span class="title">
@@ -27,7 +27,6 @@ get_header();
       </a>
     </section>
     <section class="blog-bg">
-      <div class="blog-grid container">
         <?php require_once $_SERVER["DOCUMENT_ROOT"].'/portinari/wp-content/themes/portinari/template-parts/content/home/blog.php'?>
       </div>
       <a href="<?php echo get_site_url()?>/blog" class="outline-white button block-centering">
