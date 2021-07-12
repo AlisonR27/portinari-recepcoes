@@ -10,7 +10,7 @@
   );
   $the_query = new WP_Query( $args );
 ?>
-<section id="Blog" class="container">
+<section id="Blog">
   <h1 class="archive-title">Blog</h1>
   <?php if ($the_query->have_posts()) {
       while ($the_query->have_posts()) {
@@ -26,6 +26,8 @@
       <?php
       }
       wp_reset_postdata();
+    } else {
+      include $_SERVER["DOCUMENT_ROOT"].'/portinari/wp-content/themes/portinari/template-parts/content/no-content.php';
     }
   ?>
 <div class="pagination">

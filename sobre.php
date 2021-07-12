@@ -3,7 +3,7 @@
 
 get_header();
 ?>
-<section id="Blog" class="container">
+<section id="Blog">
   <h1 class="archive-title">A Portinari</h1>
   <div class="sobre-holder">
     <div class="slide"></div>

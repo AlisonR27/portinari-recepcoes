@@ -19,7 +19,7 @@
   </script>
 </head>
 <body>
-  <header class="navigation <?php echo is_home() ? '' : 'not-home'?>">
+  <header class="navigation <?php echo is_front_page() ? '' : 'not-home'?>">
     <div class="navigation-control">
       <div></div>
       <a href="<?php echo get_site_url();?>" class="logo">
@@ -64,4 +64,4 @@
       </ul>
     </ul>
   </header>
-  <main>
+  <main <?php if (!is_front_page()) { ?>class="container"<?php }?>>

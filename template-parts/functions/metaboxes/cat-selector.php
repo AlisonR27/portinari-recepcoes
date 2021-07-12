@@ -16,7 +16,6 @@ function servicos_meta_box_callback( $post ) {
   $value = get_post_meta( $post->ID, '_servicos', true );
   // The Query
   $the_query = new WP_Query( array('post_type' => 'servicos') );
-  $options = '';
   // The Loop
   if ($the_query->have_posts()) {
     ?>
@@ -25,7 +24,7 @@ function servicos_meta_box_callback( $post ) {
     <?php
     while ($the_query->have_posts()) {
       $the_query->the_post();
-      ?><option value="<?php echo the_id()?>"><?php echo the_title()?></option>
+      ?><option value="<?php echo the_id()?>" <?php if(get_the_id() == $value) { echo "selected";}?>><?php echo the_title()?></option>
     <?php
     }
     ?>
@@ -43,11 +42,11 @@ function servicos_meta_box_callback( $post ) {
  */
 function save_servicos_meta_box_data( $post_id ) {
     // Check if our nonce is set.
-    if ( ! isset( $_POST['gallery_nonce'] ) ) {
+    if ( ! isset( $_POST['servicos_nonce'] ) ) {
         return;
     }
     // Verify that the nonce is valid.
-    if ( ! wp_verify_nonce( $_POST['gallery_nonce'], 'gallery_nonce' ) ) {
+    if ( ! wp_verify_nonce( $_POST['servicos_nonce'], 'servicos_nonce' ) ) {
         return;
     }
     // If this is an autosave, our form has not been submitted, so we don't want to do anything.
@@ -67,11 +66,11 @@ function save_servicos_meta_box_data( $post_id ) {
     }
     /* OK, it's safe for us to save the data now. */
     // Make sure that it is set.
-    if ( ! isset( $_POST['files'] ) ) {
+    if ( ! isset( $_POST['cat_select'] ) ) {
         return;
     }
     // Sanitize user input.
-    $my_data = sanitize_text_field( $_POST['servicos'] );
+    $my_data = sanitize_text_field( $_POST['cat_select'] );
     // Update the meta field in the database.
     update_post_meta( $post_id, '_servicos', $my_data);
 }

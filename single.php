@@ -1,7 +1,7 @@
 <?php 
 get_header();
 ?>
-<article class="container">
+<article>
 <h1 class="archive-title"><?php the_title()?></h1>
 <img src="<?php the_post_thumbnail_url();?>" class="post-banner">
 <?php the_content();?>

@@ -2,7 +2,6 @@
 
 get_header();
 ?>
-<main class="container" >
   <h1 class="archive-title">Galeria</h1>
   <script>
     function openGallery(ev) { 
@@ -78,16 +77,18 @@ get_header();
         while ($the_query->have_posts()) {
           $the_query->the_post();?>
           <div class="gallery-card">
+            <div class="overlay" style="background-color: <?php echo get_post_meta( get_post_meta(get_the_id(),'_servicos', true), '_global_notice', TRUE );?>"></div>
             <a href="#" onclick="openGallery(event)" class="gallery-content" data-id="<?php the_id();?>"> <?php the_title();?> </a>
             <img src="<?php the_post_thumbnail_url();?>" alt="">
           </div>
         <?php
         }
         wp_reset_postdata();
+      } else {
+        include $_SERVER["DOCUMENT_ROOT"].'/portinari/wp-content/themes/portinari/template-parts/content/no-content.php';
       }
     ?>
   </section>
-</main>
 <style>
   #close-btn {
     position:absolute;

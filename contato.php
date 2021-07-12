@@ -3,7 +3,7 @@
 
 get_header();
 ?>
-<section id="Blog" class="container">
+<section id="Blog">
   <h1 class="archive-title">Contato</h1>
   <h2>Deixe sua mensagem</h2>
   <div class="contato-content">
